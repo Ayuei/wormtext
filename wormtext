@@ -1,0 +1,7 @@
+#!/bin/sh
+
+text="'$*'"
+wm_temp="$(mktemp)"
+
+echo $text > $wm_temp
+wormhole send $wm_temp
